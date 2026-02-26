@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DMS.DAL/DMS.DAL.csproj" />
+  <Project Path="DMS.Web/DMS.Web.csproj" />
+</Solution>
