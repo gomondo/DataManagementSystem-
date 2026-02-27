@@ -1,7 +1,7 @@
 # DMS Project
 
 ## 📌 Overview
-The **DMS (Data Management System)** project is a modular ASP.NET Core solution designed for secure, scalable, and maintainable enterprise applications. It leverages **Entity Framework Core**, **ASP.NET Core Identity**, and **Blazor Fluent UI** for a modern, user-friendly experience.
+The **DMS (Data Management System)** project is a modular ASP.NET Core solution designed for secure, scalable, and maintainable enterprise applications. It leverages **Entity Framework Core**, **ASP.NET Core Identity**, and **Blazor Server Fluent UI** for a modern, user-friendly experience.
 
 ---
 
