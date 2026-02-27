@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DMS.DAL.Entities
 {
-    internal class Customer
+    public class Customer
     {
+        public long Id { get; set; }
+        public string Email { get; set; }
+        public string CompanyId { get; set; }  =string.Empty;
+        public string FullNames { get;set; }
     }
 }

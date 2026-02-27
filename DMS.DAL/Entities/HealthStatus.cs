@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DMS.DAL.Entities
 {
-    public class Address
+    internal class HealthStatus
     {
     }
 }
