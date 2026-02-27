@@ -1,0 +1,151 @@
+﻿@using Person= DMS.DAL.Entities.Person
+@using Microsoft.FluentUI.AspNetCore.Components
+@using System.ComponentModel.DataAnnotations
+@using static Microsoft.FluentUI.AspNetCore.Components.Icons.Filled.Size24
+@using Icons = Microsoft.FluentUI.AspNetCore.Components.Icons
+@inject NavigationManager Navigation
+@inject IToastService ToastService
+
+<a><h4>Person</h4></a>
+
+@code {
+    public Person Profile { get; set; } = new();
+    private bool isBusy = false;
+
+    private async Task HandleValidSubmit()
+    {
+        // if (isBusy) return;
+        // isBusy = true;
+
+        // try
+        // {
+        //     if (Profile.Id == 0)
+        //     {
+        //         await Service.AddNew(Profile);
+        //     }
+        //     else
+        //     {
+        //         await Service.Edit(Profile.Id, Profile);
+        //     }
+
+        //     ToastService.ShowSuccess("Profile saved.");
+        // }
+        // catch (HttpRequestException)
+        // {
+        //     ToastService.ShowError("Could not reach the server. Please check your connection and try again.");
+        // }
+        // catch (Exception ex)
+        // {
+        //     ToastService.ShowError($"An unexpected error occurred: {ex.Message}");
+        // }
+        // finally
+        // {
+        //     isBusy = false;
+        // }
+    }
+}
+
+<EditForm Model="@Profile" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+
+    <div>
+        <FluentLabel>Full Names</FluentLabel>
+        <FluentTextField @bind-Value="Profile.FullNames"
+                         Placeholder="e.g. Jane Doe"
+                         style="width:100%" />
+        <FluentValidationMessage For="@(() => Profile.FullNames)" />
+    </div>
+
+    <div>
+        <FluentLabel>Email</FluentLabel>
+        <FluentTextField @bind-Value="Profile.Email"
+                         TextFieldType="TextFieldType.Email"
+                         Placeholder="you@example.com"
+                         style="width:80%" />
+        <FluentValidationMessage For="@(() => Profile.Email)" />
+    </div>
+
+    <div>
+        <FluentLabel>Age</FluentLabel>
+        <FluentNumberField @bind-Value="Profile.Age"
+                           Placeholder="e.g. 30"
+                           style="width:10%" />
+        <FluentValidationMessage For="@(() => Profile.Age)" />
+    </div>
+
+    <div>
+        <FluentLabel>Birth Date</FluentLabel>
+        <InputDate @bind-Value="Profile.BirthDate"
+                   style="width:50%"
+                   Max="@DateTime.Now">
+        </InputDate>
+        <FluentValidationMessage For="@(() => Profile.BirthDate)" />
+    </div>
+
+    <div>
+        <FluentLabel>ID Number</FluentLabel>
+        <FluentTextField @bind-Value="Profile.IdNumber"
+                         Placeholder="e.g. 1234567890"
+                         style="width:50%" />
+        <FluentValidationMessage For="@(() => Profile.IdNumber)" />
+    </div>
+
+    <div>
+        <FluentLabel>Gender</FluentLabel>
+        <FluentTextField @bind-Value="Profile.Gender"
+                         Placeholder="e.g. Male/Female"
+                         style="width:50%" />
+        <FluentValidationMessage For="@(() => Profile.Gender)" />
+    </div>
+
+    <div>
+        <FluentLabel>Phone Number</FluentLabel>
+        <FluentTextField @bind-Value="Profile.PhoneNumber"
+                         Placeholder="e.g. +27 123 456 789"
+                         style="width:50%" />
+        <FluentValidationMessage For="@(() => Profile.PhoneNumber)" />
+    </div>
+
+    <div>
+        <FluentLabel>Next of Kin Name</FluentLabel>
+        <FluentTextField @bind-Value="Profile.NextOfKinName"
+                         Placeholder="e.g. John Doe"
+                         style="width:100%" />
+        <FluentValidationMessage For="@(() => Profile.NextOfKinName)" />
+    </div>
+
+    <div>
+        <FluentLabel>Next of Kin Phone Number</FluentLabel>
+        <FluentTextField @bind-Value="Profile.NextOfKinPhoneNumber"
+                         Placeholder="e.g. +27 987 654 321"
+                         style="width:50%" />
+        <FluentValidationMessage For="@(() => Profile.NextOfKinPhoneNumber)" />
+    </div>
+
+    <div>
+        <FluentLabel>Workplace Name</FluentLabel>
+        <FluentTextField @bind-Value="Profile.WorkPlaceName"
+                         Placeholder="e.g. ABC Corp"
+                         style="width:100%" />
+        <FluentValidationMessage For="@(() => Profile.WorkPlaceName)" />
+    </div>
+
+    <div>
+        <FluentLabel>Workplace Phone Number</FluentLabel>
+        <FluentTextField @bind-Value="Profile.WorkPlacePhoneNumber"
+                         Placeholder="e.g. +27 555 123 456"
+                         style="width:50%" />
+        <FluentValidationMessage For="@(() => Profile.WorkPlacePhoneNumber)" />
+    </div>
+
+    <FluentButton Type="ButtonType.Submit"
+                  Appearance="Appearance.Accent"
+                  Disabled="@isBusy"
+                  style="margin-top:1rem">
+        @(isBusy ? "Saving..." : "Submit")
+    </FluentButton>
+</EditForm>
+
+
+
+

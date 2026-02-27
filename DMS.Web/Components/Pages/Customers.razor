@@ -1,0 +1,14 @@
+﻿@page "/customer"
+
+@using DMS.Web.Components.Pages.Forms
+@using Microsoft.AspNetCore.Components.Authorization
+
+<a><h3>Customers</h3></a>
+<AuthorizeView Roles="Admin,Staff">
+    <Authorized>
+        <Customers/>
+    </Authorized>
+    <NotAuthorized>
+        <PersonForm/>
+    </NotAuthorized>    
+</AuthorizeView>

@@ -1,0 +1,13 @@
+﻿@typeparam T 
+@using Microsoft.FluentUI.AspNetCore.Components
+
+<h3>Generic Data Grid</h3>
+
+
+
+@code {
+    [Parameter]
+    public IQueryable<T>? Items { get; set; }
+}
+
+<FluentDataGrid Items="@Items"/>

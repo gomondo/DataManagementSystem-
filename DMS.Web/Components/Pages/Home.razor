@@ -1,7 +1,36 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<svg width="100%" height="500px" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#E6F2FF" rx="20" />
 
-<h1>Hello, world!</h1>
+    <!-- Left: TechSolutions Logo -->
+    <g transform="translate(50, 50)">
+        <path d="M60 0 C90 40, 90 80, 60 120 C30 80, 30 40, 60 0 Z" fill="#61A1FF" />
+        <path d="M60 30 C75 55, 75 85, 60 110 C45 85, 45 55, 60 30 Z" fill="#2682C4" />
+        <text x="0" y="150" font-size="28" fill="#1E4F85" font-family="Segoe UI, sans-serif" font-weight="bold">
+            TechSolutions
+        </text>
+    </g>
 
-Welcome to your new app.
+    <!-- Right: Security Details -->
+    <g transform="translate(300, 50)">
+        <text x="0" y="0" font-size="28" fill="#1E4F85" font-family="Segoe UI, sans-serif" font-weight="bold">
+            🔐 We Secure Your Data
+        </text>
+        <text x="0" y="40" font-size="18" fill="#333" font-family="Segoe UI, sans-serif">
+            Using modern frameworks and encryption
+        </text>
+        <text x="0" y="80" font-size="16" fill="#555" font-family="Segoe UI, sans-serif">
+            • Role-based access control
+        </text>
+        <text x="0" y="105" font-size="16" fill="#555" font-family="Segoe UI, sans-serif">
+            • Encrypted data storage
+        </text>
+        <text x="0" y="130" font-size="16" fill="#555" font-family="Segoe UI, sans-serif">
+            • Secure login with Microsoft Identity
+        </text>
+        <text x="0" y="170" font-size="14" fill="#666" font-family="Segoe UI, sans-serif">
+            Powered by Microsoft.AspNetCore.Identity.EntityFrameworkCore
+        </text>
+    </g>
+</svg>

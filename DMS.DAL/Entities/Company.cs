@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DMS.DAL.Entities
 {
-    internal class Company
+    public class Company
     {
     }
 }

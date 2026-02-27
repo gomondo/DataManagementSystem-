@@ -1,0 +1,60 @@
+﻿<HealthRiskMatrix>
+	<Questions>
+		<Question id="1">
+			<Text>Are you over 45 years old?</Text>
+			<RiskValue>3</RiskValue>
+			<Rationale>Age is a strong predictor of chronic disease risk.</Rationale>
+		</Question>
+		<Question id="2">
+			<Text>Do you exercise fewer than 3 times per week?</Text>
+			<RiskValue>4</RiskValue>
+			<Rationale>Physical inactivity is a major risk factor for cardiovascular disease, diabetes, and obesity.</Rationale>
+		</Question>
+		<Question id="3">
+			<Text>Do you eat fast food/junk food more than 4 times per week?</Text>
+			<RiskValue>2</RiskValue>
+			<Rationale>Poor diet contributes to obesity and metabolic syndrome.</Rationale>
+		</Question>
+		<Question id="4">
+			<Text>Do you sleep fewer than 6 hours per night?</Text>
+			<RiskValue>2</RiskValue>
+			<Rationale>Chronic sleep deprivation increases risk of hypertension, diabetes, and mental health issues.</Rationale>
+		</Question>
+		<Question id="5">
+			<Text>Do you often feel stressed without coping strategies?</Text>
+			<RiskValue>2</RiskValue>
+			<Rationale>Chronic stress impacts cardiovascular and immune health.</Rationale>
+		</Question>
+		<Question id="6">
+			<Text>Do you skip regular medical checkups?</Text>
+			<RiskValue>1</RiskValue>
+			<Rationale>Preventive care is important, but skipping checkups is less direct than lifestyle habits.</Rationale>
+		</Question>
+		<Question id="7">
+			<Text>Do you have a family history of chronic illness?</Text>
+			<RiskValue>3</RiskValue>
+			<Rationale>Genetics strongly influence risk for heart disease, diabetes, and cancer.</Rationale>
+		</Question>
+		<Question id="8">
+			<Text>Do you drink fewer than 5 glasses of water daily?</Text>
+			<RiskValue>1</RiskValue>
+			<Rationale>Hydration matters, but moderate impact compared to exercise/diet.</Rationale>
+		</Question>
+		<Question id="9">
+			<Text>Do you spend more than 8 hours sitting daily?</Text>
+			<RiskValue>3</RiskValue>
+			<Rationale>Sedentary behavior is independently linked to cardiovascular and metabolic disease.</Rationale>
+		</Question>
+		<Question id="10">
+			<Text>Do you rarely eat fruits or vegetables?</Text>
+			<RiskValue>2</RiskValue>
+			<Rationale>Lack of micronutrients and fiber increases long-term disease risk.</Rationale>
+		</Question>
+	</Questions>
+
+	<Scoring>
+		<Range min="0" max="5" result="Healthy" backgroundColor="Green" foregroundColor="Black" />
+		<Range min="6" max="12" result="Moderate Risk" backgroundColor="Yellow" foregroundColor="Black" />
+		<Range min="13" max="30" result="High Risk" backgroundColor="Red" foregroundColor="White" />
+	</Scoring>
+</HealthRiskMatrix>
